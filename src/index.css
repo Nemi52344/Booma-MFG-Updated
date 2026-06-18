@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Booma Manufacturing Brand Design System
+   Primary: Deep Navy #223359
+   Secondary: Vibrant Blue #2e6fb4
+   Background: Light Gray #E6E6E9
+   Typography: Montserrat + Roboto
+*/
+
+@layer base {
+  :root {
+    --background: 240 4% 90%;
+    --foreground: 222 44% 24%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 44% 24%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 44% 24%;
+
+    --primary: 222 44% 24%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 211 59% 44%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 4% 95%;
+    --muted-foreground: 222 20% 45%;
+
+    --accent: 211 59% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 15% 82%;
+    --input: 222 15% 82%;
+    --ring: 211 59% 44%;
+
+    --radius: 0.5rem;
+
+    /* Custom brand tokens */
+    --booma-navy: 222 44% 24%;
+    --booma-blue: 211 59% 44%;
+    --booma-blue-light: 211 59% 60%;
+    --booma-dark: 222 44% 12%;
+    --booma-darker: 222 50% 6%;
+    --steel: 220 10% 45%;
+    --steel-light: 220 10% 65%;
+  }
+
+  .dark {
+    --background: 222 44% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 44% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 44% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 211 59% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 44% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 30% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 211 59% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 30% 20%;
+    --input: 222 30% 20%;
+    --ring: 211 59% 44%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  .industrial-shadow {
+    box-shadow: 0 10px 40px -10px hsl(var(--booma-dark) / 0.4);
+  }
+
+  .metal-texture {
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--steel) / 0.1) 0%,
+      transparent 50%,
+      hsl(var(--steel) / 0.1) 100%
+    );
+  }
+}
