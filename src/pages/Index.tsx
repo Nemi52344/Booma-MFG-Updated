@@ -67,7 +67,7 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal variant="fade-up" delay={200}>
               <p className="mt-6 text-lg text-primary-foreground/80 max-w-2xl leading-relaxed">
-                From tool development and prototyping to scalable serial production — BMPL delivers
+                From tool development and prototyping to scalable serial production — Booma Manufacturing delivers
                 precision-engineered components for automotive, industrial, consumer, and aerospace &amp;
                 defense sectors.
               </p>

@@ -57,7 +57,7 @@ const About = () => {
       <PageHero
         image={heroAbout}
         title="Machine-Driven, Process-Led Manufacturing"
-        subtitle="BMPL operates as a Tier-1 ready manufacturing platform, supporting customers from tool development and prototyping to scalable serial production."
+        subtitle="Booma Manufacturing operates as a Tier-1 ready manufacturing platform, supporting customers from tool development and prototyping to scalable serial production."
       />
 
       {/* Who we are */}
@@ -67,7 +67,7 @@ const About = () => {
           <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto">
             <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-primary">Who We Are</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Booma Manufacturing Pvt. Ltd. (BMPL) is a machine-driven, process-led manufacturing platform —
+              Booma Manufacturing Pvt. Ltd. is a machine-driven, process-led manufacturing platform —
               composite laminations, plastic moulds, press tools, pressure die-casting dies, precision machining,
               fabrication and pipe bending, from prototype to Tier-1 serial production across automotive,
               industrial, appliances and defence.
@@ -108,7 +108,7 @@ const About = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary">Experienced Manufacturing Leadership</h2>
-            <p className="mt-4 text-muted-foreground">Decades of combined expertise driving BMPL's growth.</p>
+            <p className="mt-4 text-muted-foreground">Decades of combined expertise driving Booma Manufacturing's growth.</p>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -132,7 +132,7 @@ const About = () => {
       <section className="py-16 sm:py-20 bg-background section-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary">Why Partner with BMPL?</h2>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary">Why Partner with Booma Manufacturing?</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {strategicValue.map((s, i) => (

@@ -70,7 +70,7 @@ const Products = () => {
             <ScrollReveal variant="fade-up">
               <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary">Complete Product Contract Manufacturing</h2>
               <p className="mt-4 text-muted-foreground">
-                BMPL undertakes complete product contract manufacturing — including complex products such as
+                Booma Manufacturing undertakes complete product contract manufacturing — including complex products such as
                 coffee machines and wheelchairs, demonstrating end-to-end production capabilities.
               </p>
             </ScrollReveal>
