@@ -51,7 +51,7 @@ export default function Contact() {
                 <div className="space-y-6">
                   {[
                     { icon: MapPin, title: "Address", content: <>Thirumudivakkam,<br />Tamil Nadu 600132, India</> },
-                    { icon: Mail, title: "Email", content: <>info@boomamanufacturing.com</> },
+                    { icon: Mail, title: "Email", content: <>info@booma-mfg.com</> },
                     { icon: Phone, title: "Phone", content: <>+91 XXXX XXXXXX</> },
                     { icon: Clock, title: "Business Hours", content: <>Mon – Sat: 9:00 AM – 6:00 PM IST<br />Sunday: Closed</> },
                   ].map((item, index) => (

@@ -109,14 +109,14 @@ const Products = () => {
                     href={c.img}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block rounded-xl overflow-hidden bg-white ring-1 ring-border"
+                    className="group flex items-center justify-center rounded-xl overflow-hidden bg-white ring-1 ring-border p-3"
                     title={`View ${c.name} certificate`}
                   >
                     <img
                       src={c.img}
                       alt={`${c.name} certificate`}
                       loading="lazy"
-                      className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                      className="max-h-[300px] w-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                     />
                   </a>
                   <div className="mt-3 flex items-start gap-2.5 px-1 pb-1">
