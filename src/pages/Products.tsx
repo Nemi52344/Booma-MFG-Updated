@@ -98,22 +98,22 @@ const Products = () => {
               Our manufacturing processes meet the highest international quality standards.
             </p>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {certifications.map((c, i) => (
               <ScrollReveal key={c.name} variant="fade-up" delay={i * 100}>
-                <div className="glass-card rounded-2xl p-3">
+                <div className="glass-card rounded-2xl p-3 h-full">
                   <a
                     href={c.img}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block rounded-xl overflow-hidden bg-white ring-1 ring-border"
+                    className="group block rounded-xl overflow-hidden bg-white ring-1 ring-border aspect-[3/4]"
                     title={`View ${c.name} certificate`}
                   >
                     <img
                       src={c.img}
                       alt={`${c.name} certificate`}
                       loading="lazy"
-                      className="block w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                      className="block w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                     />
                   </a>
                   <div className="mt-3 flex items-start gap-2.5 px-1 pb-1">
