@@ -90,7 +90,6 @@ const Index = () => {
       <section className="py-16 sm:py-20 bg-background section-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto">
-            <span className="inline-block px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.18em] bg-secondary/10 text-secondary">Industries We Serve</span>
             <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-primary">Multi-Sector Manufacturing Excellence</h2>
             <p className="mt-4 text-muted-foreground">
               Proven capabilities across automotive, industrial, consumer, and aerospace &amp; defense sectors —
@@ -124,7 +123,6 @@ const Index = () => {
       <section className="py-16 sm:py-20 bg-muted section-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto">
-            <span className="text-secondary font-semibold tracking-widest text-sm uppercase">Capabilities</span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary">End-to-End Manufacturing Platform</h2>
             <p className="mt-4 text-muted-foreground">
               From tool design and prototyping through scalable serial production — all under one roof.

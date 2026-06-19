@@ -56,7 +56,6 @@ const About = () => {
       {/* Hero */}
       <PageHero
         image={heroAbout}
-        eyebrow="About Us"
         title="Machine-Driven, Process-Led Manufacturing"
         subtitle="BMPL operates as a Tier-1 ready manufacturing platform, supporting customers from tool development and prototyping to scalable serial production."
       />
@@ -66,7 +65,6 @@ const About = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto">
-            <span className="inline-block px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.18em] bg-secondary/10 text-secondary">Our Story</span>
             <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-primary">Who We Are</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Booma Manufacturing Pvt. Ltd. (BMPL) is a machine-driven, process-led manufacturing platform —
@@ -109,7 +107,6 @@ const About = () => {
       <section className="py-16 sm:py-20 bg-muted section-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-secondary font-semibold tracking-widest text-sm uppercase">Leadership Team</span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary">Experienced Manufacturing Leadership</h2>
             <p className="mt-4 text-muted-foreground">Decades of combined expertise driving BMPL's growth.</p>
           </ScrollReveal>
@@ -135,7 +132,6 @@ const About = () => {
       <section className="py-16 sm:py-20 bg-background section-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-secondary font-semibold tracking-widest text-sm uppercase">Strategic Value</span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary">Why Partner with BMPL?</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

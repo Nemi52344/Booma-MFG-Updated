@@ -41,7 +41,6 @@ const Products = () => {
       {/* Hero */}
       <PageHero
         image={heroProducts}
-        eyebrow="Our Customers"
         title="Trusted by Industry Leaders"
         subtitle="Our capabilities span many industries and use-cases, proving the strength of our core manufacturing platform."
       />
@@ -69,7 +68,6 @@ const Products = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal variant="fade-up">
-              <span className="text-secondary font-semibold tracking-widest text-sm uppercase">Beyond Components</span>
               <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary">Complete Product Contract Manufacturing</h2>
               <p className="mt-4 text-muted-foreground">
                 BMPL undertakes complete product contract manufacturing — including complex products such as
@@ -95,7 +93,6 @@ const Products = () => {
       <section className="py-16 sm:py-20 bg-background section-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-secondary font-semibold tracking-widest text-sm uppercase">Quality Assurance</span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary">Certifications &amp; Standards</h2>
             <p className="mt-4 text-muted-foreground">
               Our manufacturing processes meet the highest international quality standards.

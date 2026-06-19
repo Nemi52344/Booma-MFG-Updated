@@ -105,7 +105,6 @@ const Services = () => {
       {/* Hero */}
       <PageHero
         image={heroServices}
-        eyebrow="Capabilities & Services"
         title="Manufacturing & Tooling Capability Matrix"
         subtitle="End-to-end manufacturing spanning 10+ specialized processes with advanced machinery across a 60,000 sq ft facility."
       />
@@ -114,7 +113,6 @@ const Services = () => {
       <section className="py-16 sm:py-20 bg-background section-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" className="text-center max-w-2xl mx-auto mb-12">
-            <span className="inline-block px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.18em] bg-secondary/10 text-secondary">Technical Capabilities</span>
             <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-primary">Equipment &amp; Processes</h2>
             <p className="mt-4 text-muted-foreground">
               Select a category to explore detailed specifications, work envelopes, and applications.
@@ -174,7 +172,6 @@ const Services = () => {
       <section className="py-16 sm:py-20 bg-muted section-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" className="text-center max-w-2xl mx-auto mb-12">
-            <span className="inline-block px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.18em] bg-secondary/10 text-secondary">Product Portfolio</span>
             <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-primary">What We Manufacture</h2>
             <p className="mt-4 text-muted-foreground">
               Precision-manufactured components across every major production category.
@@ -198,7 +195,6 @@ const Services = () => {
       <section className="py-16 sm:py-20 bg-background section-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" className="text-center max-w-2xl mx-auto mb-12">
-            <span className="inline-block px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.18em] bg-secondary/10 text-secondary">Gallery</span>
             <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-primary">Inside Our Facility</h2>
             <p className="mt-4 text-muted-foreground">
               Manufacturing processes, tooling, and quality infrastructure.

@@ -31,7 +31,6 @@ export default function Contact() {
       {/* Hero */}
       <PageHero
         image={heroContact}
-        eyebrow="Contact"
         title="Ready to Build Together?"
         subtitle="Reach out to discuss your manufacturing requirements. Our team will respond within 24 hours."
       />
@@ -121,7 +120,6 @@ export default function Contact() {
       <section className="pb-16 sm:pb-20 bg-background section-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fade-up" className="mb-6">
-            <span className="inline-block px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.18em] bg-secondary/10 text-secondary">Find Us</span>
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-primary">Visit Our Facility</h2>
             <p className="mt-2 text-muted-foreground flex items-center gap-2">
               <MapPin className="w-4 h-4 text-secondary" /> Booma Manufacturing (Unit 2), Thirumudivakkam, Tamil Nadu 600132
