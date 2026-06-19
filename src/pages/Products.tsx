@@ -1,114 +1,58 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Award, ShieldCheck } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { ArrowRight, ZoomIn, X } from "lucide-react";
+import { PageHero } from "@/components/PageHero";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
-import heroImage from "@/assets/hero-sparks.jpg";
-import factoryImage from "@/assets/factory-floor.jpg";
-import precisionImage from "@/assets/precision-work.png";
-import cncImage from "@/assets/cnc-machine.jpg";
-import craftsmanImage from "@/assets/craftsman.jpg";
+import heroProducts from "@/assets/deck/photo-production.jpeg";
 
-const categories = ["All", "Progressive Dies", "Transfer Dies", "Stamping Tools", "Custom Tooling"];
+// Load all client logos from the deck
+const logos = Object.entries(
+  import.meta.glob("../assets/deck/clients/*", { eager: true, import: "default" })
+)
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, url]) => url as string);
 
-const products = [
-  { id: 1, title: "Automotive Progressive Die", category: "Progressive Dies", image: precisionImage, description: "High-speed progressive die for automotive bracket production. 24-station design with automated feeding system." },
-  { id: 2, title: "Multi-Station Transfer Die", category: "Transfer Dies", image: cncImage, description: "Complex transfer die system for large automotive structural components with integrated welding stations." },
-  { id: 3, title: "Precision Stamping Tool", category: "Stamping Tools", image: heroImage, description: "High-precision stamping tool for electronic connector housings with micro-tolerances." },
-  { id: 4, title: "Custom Assembly Fixture", category: "Custom Tooling", image: factoryImage, description: "Custom-designed assembly fixture for automated production line integration." },
-  { id: 5, title: "Medical Device Die", category: "Progressive Dies", image: craftsmanImage, description: "Precision progressive die for medical device components with cleanroom compatibility." },
-  { id: 6, title: "Aerospace Forming Tool", category: "Stamping Tools", image: precisionImage, description: "Specialized forming tool for aerospace-grade aluminum components with strict tolerance requirements." },
-  { id: 7, title: "Consumer Electronics Die", category: "Transfer Dies", image: cncImage, description: "High-volume transfer die for smartphone housing components with premium surface finish." },
-  { id: 8, title: "Inspection Gauge Set", category: "Custom Tooling", image: heroImage, description: "Complete inspection gauge set for quality control of stamped automotive parts." },
+const stats = [
+  { value: "20+", label: "Active Clients" },
+  { value: "4+", label: "Sectors" },
+  { value: "100%", label: "On-Time Delivery" },
+  { value: "Zero", label: "Quality Escapes" },
 ];
 
-export default function Products() {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+const certifications = [
+  {
+    name: "AS9100D",
+    desc: "Aerospace Quality Management System — meeting stringent requirements of aerospace and defense manufacturing.",
+  },
+  {
+    name: "ISO 9001:2015",
+    desc: "International standard for quality management — ensuring consistent quality across all operations.",
+  },
+];
 
-  const filteredProducts =
-    activeCategory === "All" ? products : products.filter((p) => p.category === activeCategory);
-
+const Products = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <ScrollReveal variant="fade-up">
-              <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium mb-6">
-                Our Products
-              </span>
-            </ScrollReveal>
-            <ScrollReveal variant="fade-up" delay={150}>
-              <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-                Portfolio of Excellence
-              </h1>
-            </ScrollReveal>
-            <ScrollReveal variant="fade-up" delay={300}>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Explore our gallery of precision-crafted tooling solutions. Each project 
-                represents our commitment to quality and engineering excellence.
-              </p>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
+      {/* Hero */}
+      <PageHero
+        image={heroProducts}
+        eyebrow="Our Customers"
+        title="Trusted by Industry Leaders"
+        subtitle="Our capabilities span many industries and use-cases, proving the strength of our core manufacturing platform."
+      />
 
-      {/* Filter Section */}
-      <section className="py-8 bg-background border-b border-border sticky top-20 z-40">
+      {/* Client logos */}
+      <section className="py-16 sm:py-20 bg-background section-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-2 justify-center">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={activeCategory === category ? "default" : "outline"}
-                onClick={() => setActiveCategory(category)}
-                className={
-                  activeCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "border-border hover:border-primary hover:text-primary"
-                }
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Products Grid */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProducts.map((product, index) => (
-              <ScrollReveal key={product.id} variant="fade-up" delay={index * 80}>
-                <div className="group bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-xl h-full">
-                  <div className="aspect-[4/3] overflow-hidden relative">
-                    <img
-                      src={product.image}
-                      alt={product.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <button
-                      onClick={() => setLightboxImage(product.image)}
-                      className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center"
-                    >
-                      <ZoomIn className="w-10 h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </button>
-                  </div>
-                  <div className="p-5">
-                    <span className="text-xs text-primary font-medium uppercase tracking-wider">
-                      {product.category}
-                    </span>
-                    <h3 className="text-lg font-semibold text-card-foreground mt-1 mb-2">
-                      {product.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                      {product.description}
-                    </p>
-                  </div>
+          <ScrollReveal variant="fade-up" className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-primary">Clients We Have Worked With</h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {logos.map((src, i) => (
+              <ScrollReveal key={i} variant="fade" delay={(i % 5) * 60}>
+                <div className="flex items-center justify-center h-24 rounded-xl glass-card p-4 industrial-shadow">
+                  <img src={src} alt={`Client ${i + 1}`} className="max-h-14 max-w-full object-contain" loading="lazy" />
                 </div>
               </ScrollReveal>
             ))}
@@ -116,33 +60,73 @@ export default function Products() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <ScrollReveal variant="fade-up">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Need a Similar Solution?</h2>
-            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Our engineering team is ready to develop custom tooling solutions for your 
-              specific manufacturing requirements.
+      {/* Contract manufacturing */}
+      <section className="py-16 sm:py-20 bg-muted section-soft">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <ScrollReveal variant="fade-up">
+              <span className="text-secondary font-semibold tracking-widest text-sm uppercase">Beyond Components</span>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary">Complete Product Contract Manufacturing</h2>
+              <p className="mt-4 text-muted-foreground">
+                BMPL undertakes complete product contract manufacturing — including complex products such as
+                coffee machines and wheelchairs, demonstrating end-to-end production capabilities.
+              </p>
+            </ScrollReveal>
+          </div>
+
+          <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {stats.map((s, i) => (
+              <ScrollReveal key={s.label} variant="scale" delay={i * 80}>
+                <div className="rounded-xl bg-primary p-7 text-center industrial-shadow">
+                  <p className="text-3xl sm:text-4xl font-extrabold text-secondary">{s.value}</p>
+                  <p className="mt-2 text-sm text-primary-foreground/80">{s.label}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="py-16 sm:py-20 bg-background section-soft">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal variant="fade-up" className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-secondary font-semibold tracking-widest text-sm uppercase">Quality Assurance</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary">Certifications &amp; Standards</h2>
+            <p className="mt-4 text-muted-foreground">
+              Our manufacturing processes meet the highest international quality standards.
             </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg">
-              <Link to="/contact">
-                Request a Quote <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {certifications.map((c, i) => (
+              <ScrollReveal key={c.name} variant="fade-up" delay={i * 100}>
+                <div className="rounded-xl glass-card p-8 industrial-shadow h-full">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
+                    {i === 0 ? <ShieldCheck className="w-6 h-6" /> : <Award className="w-6 h-6" />}
+                  </div>
+                  <h3 className="mt-5 text-xl font-bold text-primary">{c.name}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{c.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-14 bg-primary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <ScrollReveal variant="scale">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground">Ready to Build Together?</h2>
+            <p className="mt-4 text-primary-foreground/70 max-w-xl mx-auto">Reach out to discuss your manufacturing requirements.</p>
+            <Button asChild size="lg" className="mt-8 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+              <Link to="/contact">Contact Us <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
           </ScrollReveal>
         </div>
       </section>
-
-      {/* Lightbox */}
-      {lightboxImage && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4" onClick={() => setLightboxImage(null)}>
-          <button onClick={() => setLightboxImage(null)} className="absolute top-4 right-4 text-white hover:text-primary transition-colors">
-            <X className="w-8 h-8" />
-          </button>
-          <img src={lightboxImage} alt="Product detail" className="max-w-full max-h-full object-contain" />
-        </div>
-      )}
     </Layout>
   );
-}
+};
+
+export default Products;
