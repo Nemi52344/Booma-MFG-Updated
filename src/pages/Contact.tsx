@@ -49,7 +49,7 @@ export default function Contact() {
 
                 <div className="space-y-6">
                   {[
-                    { icon: MapPin, title: "Address", content: <>Thirumudivakkam,<br />Tamil Nadu 600132, India</> },
+                    { icon: MapPin, title: "Address", content: <>Thirumudivakkam, Chennai,<br />Tamil Nadu 600132, India</> },
                     { icon: Mail, title: "Email", content: <>info@booma-mfg.com</> },
                     { icon: Phone, title: "Phone", content: <>+91 XXXX XXXXXX</> },
                     { icon: Clock, title: "Business Hours", content: <>Mon – Sat: 9:00 AM – 6:00 PM IST<br />Sunday: Closed</> },
@@ -122,14 +122,14 @@ export default function Contact() {
           <ScrollReveal variant="fade-up" className="mb-6">
             <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-primary">Visit Our Facility</h2>
             <p className="mt-2 text-muted-foreground flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-secondary" /> Booma Manufacturing (Unit 2), Thirumudivakkam, Tamil Nadu 600132
+              <MapPin className="w-4 h-4 text-secondary" /> Booma Manufacturing (Unit 2), Thirumudivakkam, Chennai, Tamil Nadu 600132
             </p>
           </ScrollReveal>
           <ScrollReveal variant="fade" delay={120}>
             <div className="rounded-2xl overflow-hidden ring-1 ring-border industrial-shadow">
               <iframe
                 title="Booma Manufacturing location"
-                src="https://www.google.com/maps?q=Booma+Manufacturing+Unit+2,+Thirumudivakkam,+Tamil+Nadu+600132&output=embed"
+                src="https://www.google.com/maps?q=Booma+Manufacturing+Unit+2,+Thirumudivakkam,+Chennai,+Tamil+Nadu+600132&output=embed"
                 className="w-full h-[380px] sm:h-[440px]"
                 style={{ border: 0 }}
                 loading="lazy"

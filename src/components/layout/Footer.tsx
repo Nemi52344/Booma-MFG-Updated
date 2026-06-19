@@ -61,7 +61,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-primary-foreground/60">
                 <MapPin className="w-4 h-4 text-white flex-shrink-0 mt-0.5" />
-                <span>Thirumudivakkam, Tamil Nadu 600132</span>
+                <span>Thirumudivakkam, Chennai, Tamil Nadu 600132</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-primary-foreground/60">
                 <Mail className="w-4 h-4 text-white flex-shrink-0" />
