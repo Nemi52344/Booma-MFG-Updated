@@ -25,8 +25,8 @@ const stats = [
 const certifications = [
   {
     img: certISO,
-    name: "ISO 9001:2015",
-    desc: "Quality Management System — certified for consistent quality across all operations.",
+    name: "AS9100D & ISO 9001:2015",
+    desc: "Aerospace & engineering Quality Management System — certified by TÜV SÜD America.",
   },
   {
     img: certICAT,
@@ -98,22 +98,22 @@ const Products = () => {
               Our manufacturing processes meet the highest international quality standards.
             </p>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto items-start">
             {certifications.map((c, i) => (
               <ScrollReveal key={c.name} variant="fade-up" delay={i * 100}>
-                <div className="glass-card rounded-2xl p-4 h-full">
+                <div className="glass-card rounded-2xl p-3">
                   <a
                     href={c.img}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center justify-center rounded-xl overflow-hidden bg-white ring-1 ring-border p-3"
+                    className="group block rounded-xl overflow-hidden bg-white ring-1 ring-border"
                     title={`View ${c.name} certificate`}
                   >
                     <img
                       src={c.img}
                       alt={`${c.name} certificate`}
                       loading="lazy"
-                      className="max-h-[300px] w-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                      className="block w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                     />
                   </a>
                   <div className="mt-3 flex items-start gap-2.5 px-1 pb-1">
