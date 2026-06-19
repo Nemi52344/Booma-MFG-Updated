@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/PageHero";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
-import heroProducts from "@/assets/deck/photo-production.jpeg";
+import heroProducts from "@/assets/deck/photo-production.webp";
 
 // Load all client logos from the deck
 const logos = Object.entries(

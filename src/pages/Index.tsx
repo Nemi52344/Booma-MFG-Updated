@@ -6,11 +6,11 @@ import {
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
-import heroImg from "@/assets/deck/photo-machine3.jpg";
-import indAuto from "@/assets/deck/ind-automotive.jpeg";
-import indIndustrial from "@/assets/deck/photo-machine2.jpg";
-import indConsumer from "@/assets/deck/ind-consumer.jpeg";
-import indDefence from "@/assets/deck/ind-defence.jpeg";
+import heroImg from "@/assets/deck/photo-machine3.webp";
+import indAuto from "@/assets/deck/ind-automotive.webp";
+import indIndustrial from "@/assets/deck/photo-machine2.webp";
+import indConsumer from "@/assets/deck/ind-consumer.webp";
+import indDefence from "@/assets/deck/ind-defence.webp";
 
 const industries = [
   {

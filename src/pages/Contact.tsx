@@ -8,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
-import heroContact from "@/assets/deck/photo-machine2.jpg";
+import heroContact from "@/assets/deck/photo-machine2.webp";
 
 export default function Contact() {
   const { toast } = useToast();

@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/PageHero";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
 
-import heroAbout from "@/assets/deck/photo-factory.jpg";
-import photoVijay from "@/assets/deck/team-vijay.png";
-import photoSubramanian from "@/assets/deck/team-subramanian.png";
-import photoAnirudh from "@/assets/deck/team-anirudh.png";
+import heroAbout from "@/assets/deck/photo-factory.webp";
+import photoVijay from "@/assets/deck/team-vijay.webp";
+import photoSubramanian from "@/assets/deck/team-subramanian.webp";
+import photoAnirudh from "@/assets/deck/team-anirudh.webp";
 
 const verticals = [
   { icon: Boxes, title: "Mechanical Components", desc: "Metal & plastic manufacturing at scale." },

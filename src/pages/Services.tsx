@@ -6,15 +6,15 @@ import { PageHero } from "@/components/PageHero";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
 
-import heroServices from "@/assets/deck/photo-machining.jpeg";
-import gVmc from "@/assets/deck/photo-vmc-cnc.jpg";
-import gTooling from "@/assets/deck/photo-tooling.jpeg";
-import gPress from "@/assets/deck/photo-press-tool.jpeg";
-import gFactory from "@/assets/deck/photo-factory.jpg";
-import gFab from "@/assets/deck/photo-fabrication.jpeg";
-import gMachining from "@/assets/deck/photo-machining.jpeg";
-import gProduction from "@/assets/deck/photo-production.jpeg";
-import gQuality from "@/assets/deck/photo-quality.jpeg";
+import heroServices from "@/assets/deck/photo-machining.webp";
+import gVmc from "@/assets/deck/photo-vmc-cnc.webp";
+import gTooling from "@/assets/deck/photo-tooling.webp";
+import gPress from "@/assets/deck/photo-press-tool.webp";
+import gFactory from "@/assets/deck/photo-factory.webp";
+import gFab from "@/assets/deck/photo-fabrication.webp";
+import gMachining from "@/assets/deck/photo-machining.webp";
+import gProduction from "@/assets/deck/photo-production.webp";
+import gQuality from "@/assets/deck/photo-quality.webp";
 
 const matrix = [
   {

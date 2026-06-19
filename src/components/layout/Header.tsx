@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import boomaLogo from "@/assets/booma-logo.png";
+import boomaLogo from "@/assets/booma-logo.webp";
 
 const navigation = [
   { name: "Home", href: "/" },

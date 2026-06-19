@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import boomaLogo from "@/assets/booma-logo.png";
+import boomaLogo from "@/assets/booma-logo.webp";
 
 export function Footer() {
   return (
