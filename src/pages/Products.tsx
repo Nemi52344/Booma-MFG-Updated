@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/PageHero";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
 import heroProducts from "@/assets/deck/photo-production.webp";
+import certISO from "@/assets/deck/cert-iso-9001.webp";
+import certICAT from "@/assets/deck/cert-icat.webp";
 
 // Load all client logos from the deck
 const logos = Object.entries(
@@ -22,12 +24,14 @@ const stats = [
 
 const certifications = [
   {
-    name: "AS9100D",
-    desc: "Aerospace Quality Management System — meeting stringent requirements of aerospace and defense manufacturing.",
+    img: certISO,
+    name: "ISO 9001:2015",
+    desc: "Quality Management System — certified for consistent quality across all operations.",
   },
   {
-    name: "ISO 9001:2015",
-    desc: "International standard for quality management — ensuring consistent quality across all operations.",
+    img: certICAT,
+    name: "ICAT Type Approval",
+    desc: "Automotive type approval certification — ICAT (NATRiP, Govt. of India).",
   },
 ];
 
@@ -100,12 +104,28 @@ const Products = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {certifications.map((c, i) => (
               <ScrollReveal key={c.name} variant="fade-up" delay={i * 100}>
-                <div className="rounded-xl glass-card p-8 industrial-shadow h-full">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
-                    {i === 0 ? <ShieldCheck className="w-6 h-6" /> : <Award className="w-6 h-6" />}
+                <div className="glass-card rounded-2xl p-4 h-full">
+                  <a
+                    href={c.img}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block rounded-xl overflow-hidden bg-white ring-1 ring-border"
+                    title={`View ${c.name} certificate`}
+                  >
+                    <img
+                      src={c.img}
+                      alt={`${c.name} certificate`}
+                      loading="lazy"
+                      className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
+                  </a>
+                  <div className="mt-3 flex items-start gap-2.5 px-1 pb-1">
+                    <ShieldCheck className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-bold text-primary leading-tight">{c.name}</h3>
+                      <p className="mt-0.5 text-xs text-muted-foreground">{c.desc}</p>
+                    </div>
                   </div>
-                  <h3 className="mt-5 text-xl font-bold text-primary">{c.name}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{c.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
