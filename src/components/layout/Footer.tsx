@@ -15,7 +15,6 @@ export function Footer() {
           <div className="space-y-3">
             <div className="flex items-center gap-3">
               <img src={boomaLogo} alt="Booma Manufacturing" className="h-10 w-auto" />
-              <span className="text-lg font-bold text-primary-foreground" style={{ fontFamily: "'Montserrat', sans-serif" }}>BMPL</span>
             </div>
             <p className="text-sm font-semibold tracking-wide text-primary-foreground/90">
               BOOMA MANUFACTURING PVT. LTD.
